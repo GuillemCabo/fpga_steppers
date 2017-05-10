@@ -1,0 +1,23 @@
+# -- IceZUM Alhambra leds
+
+set_io LPORT[0] 95 
+set_io LPORT[1] 96
+set_io LPORT[2] 97
+set_io LPORT[3] 98
+
+set_io LPORT[4] 99
+set_io LPORT[5] 101
+set_io LPORT[6] 102
+set_io LPORT[7] 104
+
+# ------------ User push buttons -------------------
+set_io --warn-no-port SW1  10
+set_io --warn-no-port SW2  11
+# -- In top female header
+set_io --warn-no-port step   144
+set_io --warn-no-port dir    143
+set_io --warn-no-port en[0]  142
+set_io --warn-no-port en[1]  141
+# --In bottom female header
+set_io --warn-no-port clk    78
+set_io --warn-no-port idir   79
