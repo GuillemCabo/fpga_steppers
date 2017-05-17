@@ -1,11 +1,20 @@
 `default_nettype none
-module driver_to_led (CLK,ext_clk,LPORT,SW1,en,idir,dir,step);
+module driver_to_led (CLK,mo,ext_clk,LPORT,SW1,en,idir,dir,step);
     output  idir,dir,step;
     output [7:0] LPORT; 
     input [1:0] en;
+    output  [1:0] mo;
     input CLK,ext_clk,SW1;
         
-  //  assign idir = en[0]&(~en[1]);
+//step modes
+//mo [0] mo[1]
+// 0      0    full
+// 1      0    half
+// x      0    1/4
+// 0      1    1/8
+// 1      1    1/16
+// x      1    1/32
+    assign mo = 2'b11;
 
     always @ (posedge SW1)
        dir=~dir;
