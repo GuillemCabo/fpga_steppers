@@ -16,8 +16,9 @@ set_io --warn-no-port SW2  11
 # -- In top female header
 set_io --warn-no-port step   144
 set_io --warn-no-port dir    143
-set_io --warn-no-port en[0]  142
-set_io --warn-no-port en[1]  141
+set_io --warn-no-port en[0]  37
+set_io --warn-no-port en[1]  38
 # --In bottom female header
-set_io --warn-no-port clk    78
+set_io --warn-no-port ext_clk    78
 set_io --warn-no-port idir   79
+set_io --warn-no-port CLK   21
